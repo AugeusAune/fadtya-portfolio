@@ -6,7 +6,7 @@
       >
         <span class="text-sm text-white text-center"
           >© {{ year }}
-          <a href="https://flowbite.com/" class="hover:underline">Muhammad Imam</a>.
+          <a href="https://flowbite.com/" class="hover:underline">Farhan Aditya</a>.
           All Rights Reserved.
         </span>
       </div>

@@ -2,11 +2,15 @@
   <div class="p-10">
     <div class="grid lg:grid-cols-2 grid-cols-1 text-center place-items-center">
       <div>
-        <h1 class="text-white font-bold lg:text-[4rem] md:text-[2rem] text-[2rem] text-shadow" >
+        <h1
+          class="text-white font-bold lg:text-[4rem] md:text-[2rem] text-[2rem] text-shadow"
+        >
           <Icon name="arcticons:expedia" class="text-green-500" />
           My <span class="text-green-500">Experience</span>
         </h1>
-        <p class="lg:text-lg text-[15px] lg:w-[90%] mx-auto md:w-[80%] w-[90%] text-[#9fa8b7] mt-2 text-shadow" >
+        <p
+          class="lg:text-lg text-[15px] lg:w-[90%] mx-auto md:w-[80%] w-[90%] text-[#9fa8b7] mt-2 text-shadow"
+        >
           I have made coding a part of my life, the initial interest was only
           because of the colorful code editor which looked so cool, then I tried
           to delve deeper into the world of coding, when I encountered an error
@@ -37,5 +41,5 @@
 </template>
 
 <script setup>
-import experience from "../list/experience";
+  import experience from '../list/experience';
 </script>
