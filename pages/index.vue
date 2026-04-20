@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div>
     <div id="home">
       <HeroSection />
     </div>
@@ -35,8 +35,21 @@
 </script>
 
 <style scoped>
+  body {
+    overflow-x: hidden;
+  }
+
   #home {
-    background-image: radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.05) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.05) 0%, transparent 50%);
+    background-image:
+      radial-gradient(
+        circle at 20% 30%,
+        rgba(22, 163, 74, 0.05) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        rgba(22, 163, 74, 0.05) 0%,
+        transparent 50%
+      );
   }
 </style>

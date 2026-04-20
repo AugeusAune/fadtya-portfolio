@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-5 grid-cols-1 gap-16 items-start">
         <!-- Sidebar Info -->
-        <div class="lg:col-span-2 lg:sticky lg:top-32 space-y-8 order-1 lg:order-2">
+        <div class="lg:col-span-2 lg:sticky lg:top-24 space-y-8">
           <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-widest mb-4">
               Academic Background
@@ -18,7 +18,7 @@
         </div>
 
         <!-- Timeline -->
-        <div class="lg:col-span-3 order-2 lg:order-1 max-h-[700px] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-green-500 dark:scrollbar-thumb-green-500/30 scrollbar-track-transparent">
+        <div class="lg:col-span-3 pb-12">
           <UtilsTimeline :data="education" />
         </div>
       </div>
