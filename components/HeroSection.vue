@@ -4,14 +4,14 @@
       <!-- Text Side -->
       <div class="relative z-10 text-center lg:text-left">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-[10px] font-black uppercase tracking-widest mb-5"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-5"
         >
           <span class="relative flex h-2 w-2">
             <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
             ></span>
             <span
-              class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+              class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"
             ></span>
           </span>
           Available for New Projects
@@ -21,7 +21,7 @@
           class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight"
         >
           Crafting Digital<br />
-          <span class="text-green-500">Experiences</span> That Matter
+          <span class="text-blue-500">Experiences</span> That Matter
         </h1>
 
         <p
@@ -29,7 +29,7 @@
         >
           I'm
           <span
-            class="font-bold text-slate-900 dark:text-white underline decoration-green-500/30"
+            class="font-bold text-slate-900 dark:text-white underline decoration-blue-500/30"
             >Farhan Aditya</span
           >, a Full Stack Developer dedicated to building efficient, scalable,
           and user-centric applications for modern businesses.
@@ -40,7 +40,7 @@
         >
           <a
             href="#projects"
-            class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white text-sm font-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20"
+            class="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20"
           >
             View My Projects
           </a>
@@ -58,7 +58,7 @@
       <!-- Code Block Side -->
       <div class="relative hidden lg:block group">
         <div
-          class="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
+          class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
         ></div>
         <div
           class="relative bg-[#0f172a] rounded-2xl shadow-xl overflow-hidden border border-gray-800"
@@ -69,7 +69,7 @@
             <div class="flex gap-1.5">
               <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
               <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-blue-500/50"></div>
             </div>
             <div class="text-[10px] text-gray-500 font-mono">
               DeveloperIdentity.js

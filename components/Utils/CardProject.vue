@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group h-full flex flex-col border border-slate-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#0f172a] hover:border-green-500/40 transition-all duration-300 overflow-hidden w-full hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/5"
+    class="group h-full flex flex-col border border-slate-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#0f172a] hover:border-blue-500/40 transition-all duration-300 overflow-hidden w-full hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5"
   >
     <!-- Image -->
     <div class="relative h-44 overflow-hidden">
@@ -24,7 +24,7 @@
     <!-- Content -->
     <div class="p-5 flex-1 flex flex-col gap-3">
       <h3
-        class="text-sm font-black text-slate-900 dark:text-white group-hover:text-green-500 transition-colors leading-snug"
+        class="text-sm font-black text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors leading-snug"
       >
         {{ props.title }}
       </h3>
@@ -41,7 +41,7 @@
         <div
           v-for="(icon, index) in props.tech"
           :key="index"
-          class="p-1.5 rounded-lg bg-slate-100 dark:bg-gray-800/80 border border-slate-200 dark:border-gray-700 group-hover:border-green-500/20 transition-colors"
+          class="p-1.5 rounded-lg bg-slate-100 dark:bg-gray-800/80 border border-slate-200 dark:border-gray-700 group-hover:border-blue-500/20 transition-colors"
         >
           <Icon :name="icon" class="text-base block" />
         </div>

@@ -10,7 +10,7 @@
           <!-- Left -->
           <div class="p-6 sm:p-10 bg-slate-50/50 dark:bg-gray-900/20">
             <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-[10px] font-black uppercase tracking-widest mb-6"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-6"
             >
               Available for Hire
             </div>
@@ -19,7 +19,7 @@
             >
               Let's build <br />
               <span
-                class="text-green-500 underline decoration-green-500/30 underline-offset-4"
+                class="text-blue-500 underline decoration-blue-500/30 underline-offset-4"
                 >something</span
               >
               great.
@@ -37,10 +37,10 @@
                 :key="index"
                 :href="item.link"
                 target="_blank"
-                class="group flex items-center gap-4 p-2 pr-4 rounded-2xl bg-white dark:bg-gray-800/40 border border-slate-200/60 dark:border-gray-700/50 hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300"
+                class="group flex items-center gap-4 p-2 pr-4 rounded-2xl bg-white dark:bg-gray-800/40 border border-slate-200/60 dark:border-gray-700/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
               >
                 <div
-                  class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-gray-800 group-hover:bg-green-500 text-slate-600 dark:text-gray-400 group-hover:text-white transition-all duration-300 shrink-0"
+                  class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-gray-800 group-hover:bg-blue-500 text-slate-600 dark:text-gray-400 group-hover:text-white transition-all duration-300 shrink-0"
                 >
                   <Icon :name="item.icon" class="text-xl" />
                 </div>
@@ -54,13 +54,13 @@
                     class="text-sm font-bold text-slate-900 dark:text-white truncate"
                   >
                     {{
-                      item.name === 'WhatsApp' ? '+62 851-5654-5134' : item.name
+                      item.name === 'WhatsApp' ? '+62 859-2075-4983' : item.name
                     }}
                   </p>
                 </div>
                 <Icon
                   name="ph:caret-right-bold"
-                  class="text-slate-300 dark:text-gray-700 group-hover:text-green-500 group-hover:translate-x-0.5 transition-all text-sm shrink-0"
+                  class="text-slate-300 dark:text-gray-700 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all text-sm shrink-0"
                 />
               </a>
             </div>
@@ -78,14 +78,14 @@
                   <div class="relative">
                     <Icon
                       name="ph:envelope-simple-duotone"
-                      class="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-slate-400 group-focus-within:text-green-500 transition-colors"
+                      class="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-slate-400 group-focus-within:text-blue-500 transition-colors"
                     />
                     <input
                       v-model="form.email"
                       type="email"
                       required
                       placeholder="you@company.com"
-                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600"
+                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600"
                     />
                   </div>
                 </div>
@@ -98,14 +98,14 @@
                   <div class="relative">
                     <Icon
                       name="ph:chat-circle-text-duotone"
-                      class="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-slate-400 group-focus-within:text-green-500 transition-colors"
+                      class="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-slate-400 group-focus-within:text-blue-500 transition-colors"
                     />
                     <input
                       v-model="form.subject"
                       type="text"
                       required
                       placeholder="Project Inquiry"
-                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600"
+                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600"
                     />
                   </div>
                 </div>
@@ -118,14 +118,14 @@
                   <div class="relative">
                     <Icon
                       name="ph:pencil-circle-duotone"
-                      class="absolute left-4 top-4 text-lg text-slate-400 group-focus-within:text-green-500 transition-colors"
+                      class="absolute left-4 top-4 text-lg text-slate-400 group-focus-within:text-blue-500 transition-colors"
                     />
                     <textarea
                       v-model="form.message"
                       rows="4"
                       required
                       placeholder="Briefly describe your vision..."
-                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600 resize-none"
+                      class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600 resize-none"
                     ></textarea>
                   </div>
                 </div>
@@ -133,10 +133,10 @@
 
               <button
                 type="submit"
-                class="w-full group relative overflow-hidden bg-slate-900 dark:bg-green-500 text-white rounded-xl py-4 font-black text-sm transition-all active:scale-[0.98] shadow-lg shadow-green-500/20"
+                class="w-full group relative overflow-hidden bg-slate-900 dark:bg-blue-500 text-white rounded-xl py-4 font-black text-sm transition-all active:scale-[0.98] shadow-lg shadow-blue-500/20"
               >
                 <div
-                  class="absolute inset-0 bg-green-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+                  class="absolute inset-0 bg-blue-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
                 ></div>
                 <span class="relative flex items-center justify-center gap-2">
                   Shoot Message

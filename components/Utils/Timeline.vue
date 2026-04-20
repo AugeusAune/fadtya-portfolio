@@ -17,13 +17,13 @@
             'relative z-10 flex items-center justify-center rounded-full border-2 shrink-0 transition-all',
             'w-8 h-8 sm:w-10 sm:h-10',
             isPresent(item.time)
-              ? 'bg-green-500/10 border-green-500 text-green-400'
+              ? 'bg-blue-500/10 border-blue-500 text-blue-400'
               : 'bg-gray-900 border-gray-700 text-gray-500',
           ]"
         >
           <div
             v-if="isPresent(item.time)"
-            class="absolute inset-0 rounded-full bg-green-500/20 animate-ping"
+            class="absolute inset-0 rounded-full bg-blue-500/20 animate-ping"
           />
           <Icon
             :name="isPresent(item.time) ? 'ph:sparkle-fill' : 'ph:circle-fill'"
@@ -38,7 +38,7 @@
         <time
           :class="[
             'block text-[9px] sm:text-[10px] font-black uppercase tracking-widest mb-2',
-            isPresent(item.time) ? 'text-green-500' : 'text-gray-500',
+            isPresent(item.time) ? 'text-blue-500' : 'text-gray-500',
           ]"
         >
           {{ item.time }}
@@ -51,14 +51,14 @@
           <!-- Top accent for present -->
           <div
             v-if="isPresent(item.time)"
-            class="h-px bg-gradient-to-r from-green-500/60 via-green-400/30 to-transparent"
+            class="h-px bg-gradient-to-r from-blue-500/60 via-blue-400/30 to-transparent"
           />
 
           <div class="p-4 sm:p-5">
             <!-- Title + badge -->
             <div class="flex flex-wrap items-start gap-2 mb-2 sm:mb-3">
               <h4
-                class="font-black text-white text-xs sm:text-sm leading-snug group-hover:text-green-400 transition-colors flex-1 break-words min-w-0"
+                class="font-black text-white text-xs sm:text-sm leading-snug group-hover:text-blue-400 transition-colors flex-1 break-words min-w-0"
               >
                 {{ item.title }}
               </h4>
@@ -67,7 +67,7 @@
                 :class="[
                   'shrink-0 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-wider leading-none whitespace-nowrap',
                   isPresent(item.time)
-                    ? 'bg-green-500/15 text-green-400 border border-green-500/20'
+                    ? 'bg-blue-500/15 text-blue-400 border border-blue-500/20'
                     : 'bg-gray-800 text-gray-400 border border-gray-700',
                 ]"
               >
@@ -89,7 +89,7 @@
                 v-for="(icon, idx) in item.icon_skil"
                 :key="idx"
                 :name="icon"
-                class="text-sm sm:text-base text-gray-600 hover:text-green-400 transition-colors cursor-default"
+                class="text-sm sm:text-base text-gray-600 hover:text-blue-400 transition-colors cursor-default"
               />
             </div>
           </div>

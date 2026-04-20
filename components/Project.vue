@@ -3,14 +3,14 @@
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col items-center text-center mb-10 sm:mb-14">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-[10px] font-black uppercase tracking-widest mb-3"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-3"
         >
           Case Studies
         </div>
         <h2
           class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white leading-tight"
         >
-          Featured <span class="text-green-500">Portfolio</span>
+          Featured <span class="text-blue-500">Portfolio</span>
         </h2>
         <p
           class="mt-3 text-sm text-slate-600 dark:text-gray-400 max-w-xl mx-auto leading-relaxed"

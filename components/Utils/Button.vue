@@ -31,9 +31,9 @@ switch (props.type) {
     className =
       "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-blue-800";
     break;
-  case "lightgreen":
+  case "skyblue":
     className =
-      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-[#16a34a]";
+      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-sky-500";
     break;
   case "pink":
     className =
@@ -43,9 +43,9 @@ switch (props.type) {
     className =
       "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-slate-950";
     break;
-  case "green":
+  case "indigo":
     className =
-      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-green-700";
+      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-indigo-700";
     break;
   case "purple":
     className =
@@ -53,7 +53,7 @@ switch (props.type) {
     break;
   default:
     className =
-      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-green-800";
+      "text-gray-90 flex gap-2 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1  me-2 mb-2 text-white bg-blue-600";
     break;
 }
 

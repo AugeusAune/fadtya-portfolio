@@ -8,13 +8,13 @@
         <div class="space-y-2">
           <div class="flex items-center justify-center md:justify-start gap-2">
             <div
-              class="w-7 h-7 rounded-lg bg-green-500 text-white flex items-center justify-center font-black text-sm"
+              class="w-7 h-7 rounded-lg bg-blue-500 text-white flex items-center justify-center font-black text-sm"
             >
               F
             </div>
             <span
               class="text-slate-900 dark:text-white font-black text-lg tracking-tighter"
-              >Farhan<span class="text-green-500">.</span></span
+              >Farhan<span class="text-blue-500">.</span></span
             >
           </div>
           <p
@@ -31,17 +31,17 @@
         >
           <a
             href="#about"
-            class="text-slate-400 dark:text-gray-500 hover:text-green-500 transition-colors"
+            class="text-slate-400 dark:text-gray-500 hover:text-blue-500 transition-colors"
             >Experience</a
           >
           <a
             href="#projects"
-            class="text-slate-400 dark:text-gray-400 hover:text-green-500 transition-colors"
+            class="text-slate-400 dark:text-gray-400 hover:text-blue-500 transition-colors"
             >Projects</a
           >
           <a
             href="#contact"
-            class="text-slate-400 dark:text-gray-400 hover:text-green-500 transition-colors"
+            class="text-slate-400 dark:text-gray-400 hover:text-blue-500 transition-colors"
             >Contact</a
           >
         </div>

@@ -7,14 +7,14 @@
           <!-- Badge + Heading -->
           <div class="space-y-4">
             <span
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-widest"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest"
             >
               Career Journey
             </span>
             <h2
               class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight"
             >
-              My <span class="text-green-500">Experience</span>
+              My <span class="text-blue-500">Experience</span>
             </h2>
             <p
               class="text-sm text-slate-500 dark:text-gray-400 leading-relaxed"
@@ -40,7 +40,7 @@
                 :href="link.href"
                 target="_blank"
                 :aria-label="link.name"
-                class="w-11 h-11 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-500 dark:text-gray-400 hover:text-green-500 dark:hover:text-green-400 hover:border-green-500/40 transition-all duration-200 shadow-sm hover:shadow-md"
+                class="w-11 h-11 flex items-center justify-center rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-500/40 transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <Icon :name="link.icon" class="text-lg" />
               </a>

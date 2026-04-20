@@ -8,8 +8,8 @@ export default [
   {
     name: 'WhatsApp',
     icon: 'logos:whatsapp-icon',
-    type: 'green',
-    link: 'https://wa.me/6285156545134',
+    type: 'blue',
+    link: 'https://wa.me/6285920754983',
   },
   {
     name: 'LinkedIn',
