@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: [
     '@element-plus/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     'nuxt-icon',
     ['@nuxtjs/google-fonts', {
       families: {
@@ -18,6 +19,12 @@ export default defineNuxtConfig({
       }
     }],
   ],
+
+  colorMode: {
+    classSuffix: '',
+    preference: 'dark',
+    fallback: 'dark'
+  }
 
 
 })

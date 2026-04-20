@@ -1,30 +1,41 @@
 <template>
-  <div>
-    <ol class="relative border-s border-gray-500 lg:w-[80%]">
-      <li class="mb-10 ms-4 p-4 bg-gradient-to-b from-[#161f32] to-[#383f5000] rounded-lg border border-gray-800" v-for="(value,index) in props.data" :key="index">
-        <div class="absolute w-3 h-3 bg-green-500 rounded-full mt-1.5 -start-1.5 border border-gray-900" ></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400" >{{ value.time }}</time >
-        <h3 class="text-lg font-semibold text-white">
-          {{ value.title }}
-        </h3>
-        <h3 class="text-lg mt-3 font-semibold text-white">
-          <el-tag type="primary" effect="dark">{{ value.status }}</el-tag>
-        </h3>
-        <p class="mb-4 mt-3 text-base font-normal text-gray-400">
-          {{ value.description }}
-        </p>
-        <div class="mb-4 text-lg font-normal text-gray-500  flex gap-3 justify-center" >
-          <Icon v-for="(icon,index) in value.icon_skil" :key="index" :name="icon"/>
+  <div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 dark:before:via-gray-800 before:to-transparent">
+    <div v-for="(item, index) in props.data" :key="index" class="relative">
+      <div class="md:flex items-center md:space-x-4 mb-3">
+        <div class="flex items-center space-x-4 md:space-x-2 md:left-0 md:w-32">
+          <!-- Dot -->
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-900 border-4 border-slate-100 dark:border-gray-800 text-green-500 shadow md:order-1">
+            <Icon name="ph:caret-right-bold" />
+          </div>
+          <!-- Time -->
+          <time class="font-bold text-xs text-green-500 uppercase tracking-widest md:w-28 md:text-right">
+            {{ item.time }}
+          </time>
         </div>
-      </li>
-    </ol>
+        <!-- Title box -->
+        <div class="ml-14 md:ml-0 bg-white dark:bg-gray-800/30 border border-slate-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <h4 class="font-black text-slate-900 dark:text-white group-hover:text-green-500 transition-colors">
+              {{ item.title }}
+            </h4>
+            <span v-if="item.status" class="px-2 py-0.5 rounded-md bg-green-500/10 text-green-600 dark:text-green-400 text-[10px] font-black uppercase tracking-wider">
+              {{ item.status }}
+            </span>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-gray-400 leading-relaxed mb-4">
+            {{ item.description }}
+          </p>
+          <div v-if="item.icon_skil" class="flex flex-wrap gap-3">
+             <Icon v-for="(icon, idx) in item.icon_skil" :key="idx" :name="icon" class="text-xl opacity-60 hover:opacity-100 transition-opacity" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-     data: { type: Array, required: true}
-});
+  data: { type: Array, required: true }
+})
 </script>
-
-<style lang="scss" scoped></style>

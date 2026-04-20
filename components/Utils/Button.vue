@@ -1,5 +1,10 @@
 <template>
-  <div>
+  <div v-if="props.link">
+    <a :href="props.link" target="_blank" :class="className">
+      <Icon :name="props.icon" class="text-xl" /> {{ props.text }}
+    </a>
+  </div>
+  <div v-else>
     <button type="button" :class="className">
       <Icon :name="props.icon" class="text-xl" /> {{ props.text }}
     </button>
@@ -11,6 +16,7 @@ const props = defineProps({
   text: { type: String, required: true },
   type: { type: String, required: true },
   icon: { type: String, required: true },
+  link: { type: String },
   isBlock: { type: Boolean },
 });
 

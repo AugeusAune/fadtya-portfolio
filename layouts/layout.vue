@@ -1,17 +1,14 @@
 <template>
-    <div class="main min-w-screen min-h-screen">
-        <slot/>
-    </div>
+  <div class="main min-h-screen bg-[#f8fafc] text-slate-900 dark:bg-[#020420] dark:text-white transition-colors duration-300">
+    <slot />
+  </div>
 </template>
 
 <script setup>
-
 </script>
 
 <style>
 .main {
-    background: linear-gradient(to bottom, #020420, #0b1127);
-    font-family: "Heebo";
+  font-family: "Heebo", sans-serif;
 }
-
 </style>

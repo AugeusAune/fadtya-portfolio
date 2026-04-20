@@ -19,4 +19,6 @@ export default [
     text: 'Programming Language',
   },
   { icon: 'logos:redis', name: 'Redis', text: 'In-Memory Database' },
+  { icon: 'skill-icons:elysia-dark', name: 'Elysia.js', text: 'Bun Web Framework' },
+  { icon: 'tabler:text-recognition', name: 'Tesseract OCR', text: 'Optical Character Recognition' },
 ];

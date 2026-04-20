@@ -1,21 +1,24 @@
 <template>
-  <div>
-    <div class="hero-section bg-gradient-to-b from-[#161f32] to-[#383f5000]">
+  <div class="overflow-x-hidden">
+    <div id="home">
       <HeroSection />
     </div>
-    <div class="skils bg-gradient-to-t from-[#161f32] to-[#383f5000]">
+    <div id="skills">
       <SkilsSection />
     </div>
-    <div class="experience bg-gradient-to-b from-[#161f32] to-[#383f5000]">
+    <div id="about">
       <Experience />
     </div>
-    <div class="project bg-gradient-to-t from-[#161f32] to-[#383f5000]">
+    <div id="education">
+      <Education />
+    </div>
+    <div id="projects">
       <Project />
     </div>
-    <div class="contact bg-gradient-to-b from-[#161f32] to-[#383f5000]">
+    <div id="contact">
       <Contact />
     </div>
-    <div class="contact bg-gradient-to-b from-[#161f32] to-[#383f5000] mt-5">
+    <div class="mt-5">
       <Footer />
     </div>
   </div>
@@ -30,9 +33,10 @@
     title: 'Farhan Aditya - Full Stack Developer',
   });
 </script>
+
 <style scoped>
-  .hero {
-    background-image: url('https://cpwebassets.codepen.io/assets/packs/lines-3-4541e35a1939230404d773f7eeddcc9b.svg');
-    background-size: 65%;
+  #home {
+    background-image: radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.05) 0%, transparent 50%);
   }
 </style>

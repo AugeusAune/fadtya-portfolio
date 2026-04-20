@@ -1,58 +1,40 @@
 <template>
-  <div>
-    <div class="lg:w-[100%] md:w-[100%] w-[80%] h-[100%] flex flex-col justify-between border rounded-lg shadow bg-gradient-to-b from-[#161f32] to-[#383f5000]` border-gray-800 mx-auto" >
-      <a href="#">
-        <img class="rounded-t-lg w-full h-full" :src="props.imageSrc" alt="Image Project" />
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" >
-            {{ props.title }}
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {{ props.description }}
-        </p>
-        <div class="flex gap-4 mb-5">
-          <Icon v-for="(icon, index) in props.tech" :key="index" :name="icon" class="text-lg"/>
+  <div class="group h-full flex flex-col justify-between border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl hover:shadow-2xl bg-white dark:bg-[#0f172a] hover:border-green-500/50 transition-all duration-500 overflow-hidden w-full hover:-translate-y-2" >
+    <div class="relative h-56 overflow-hidden">
+      <!-- Image with overlay -->
+      <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" :src="props.imageSrc" alt="Project Image" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+      
+      <!-- Badges -->
+      <div v-if="props.isPrivat" class="absolute top-4 right-4 bg-red-500/90 text-white px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1 shadow-xl backdrop-blur-md">
+        <Icon name="ph:lock-key-fill" /> Private
+      </div>
+    </div>
+    
+    <div class="p-8 flex-1 flex flex-col">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white group-hover:text-green-500 transition-colors mb-3">
+        {{ props.title }}
+      </h3>
+      <p class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+        {{ props.description }}
+      </p>
+      
+      <div class="mt-auto flex flex-wrap gap-3">
+        <div v-for="(icon, index) in props.tech" :key="index" class="p-2 rounded-xl bg-slate-100 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-lg group-hover:border-green-500/20 transition-colors">
+          <Icon :name="icon" />
         </div>
-        <a
-          :href="props.linkProject"
-          v-if="!props.isPrivat"
-          class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-green-600 hover:bg-green-700 focus:ring-green-800"
-        >
-          Visit Project
-          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10" >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
-        <a v-else class="font-bold inline-flex items-center px-3 py-2 text-sm text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-red-600 hover:bg-red-700 focus:ring-red-800" >
-          Project Private
-         <Icon name="material-symbols:lock-outline" class="ml-1"/>
-        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 const props = defineProps({
   title: { type: String, required: true },
   imageSrc: { type: String, required: true },
   description: { type: String, required: true },
   tech: { type: Array, required: true },
   linkProject: { type: String, required: true },
-  isPrivat: { type: Boolean, default: false },
-});
-
-
+  isPrivat: { type: Boolean, required: false, default: false },
+})
 </script>
-
-<style lang="scss" scoped></style>

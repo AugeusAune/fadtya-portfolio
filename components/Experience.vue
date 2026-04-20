@@ -1,45 +1,46 @@
 <template>
-  <div class="p-10">
-    <div class="grid lg:grid-cols-2 grid-cols-1 text-center place-items-center">
-      <div>
-        <h1
-          class="text-white font-bold lg:text-[4rem] md:text-[2rem] text-[2rem] text-shadow"
-        >
-          <Icon name="arcticons:expedia" class="text-green-500" />
-          My <span class="text-green-500">Experience</span>
-        </h1>
-        <p
-          class="lg:text-lg text-[15px] lg:w-[90%] mx-auto md:w-[80%] w-[90%] text-[#9fa8b7] mt-2 text-shadow"
-        >
-          I have made coding a part of my life, the initial interest was only
-          because of the colorful code editor which looked so cool, then I tried
-          to delve deeper into the world of coding, when I encountered an error
-          and was able to solve it, it was a pleasure in itself for me, more
-          precisely, I liked coding not because money, but coding is the art of
-          fixing bugs
-        </p>
-        <div class="flex justify-center mt-3">
-          <button
-            type="button"
-            class="flex items-center text-gray-90 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700"
-          >
-            <Icon name="bi:github" class="text-xl mr-2" /> Github
-          </button>
-          <button
-            type="button"
-            class="flex items-center text-gray-90 focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-800 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-600 focus:ring-blue-700"
-          >
-            <Icon name="bi:linkedin" class="text-xl mr-2" /> Linkedin
-          </button>
+  <div class="px-6 py-24 lg:py-32" id="about">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-5 grid-cols-1 gap-16 items-start">
+        <!-- Sidebar Info -->
+        <div class="lg:col-span-2 lg:sticky lg:top-32 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-widest mb-4">
+              Career Journey
+            </div>
+            <h1 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight flex items-center gap-4" >
+              My <span class="text-green-500">Experience</span>
+            </h1>
+            <p class="text-base text-slate-600 dark:text-gray-400 mt-6 leading-relaxed" >
+              I have transformed coding into a lifelong craft. From my first lines of code to leading complex enterprise engineering projects, I view every challenge as an opportunity to build something exceptional.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-black text-slate-900 dark:text-white text-sm uppercase tracking-widest">Connect Professionaly</h4>
+            <div class="flex gap-4">
+              <a v-for="link in socialLinks" :key="link.name" :href="link.href" target="_blank" 
+                 class="w-12 h-12 flex items-center justify-center rounded-2xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-800 text-slate-600 dark:text-gray-400 hover:text-green-500 dark:hover:text-green-500 hover:border-green-500/30 transition-all shadow-sm">
+                <Icon :name="link.icon" class="text-xl" />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="mt-5">
-        <UtilsTimeline :data="experience" />
+
+        <!-- Timeline -->
+        <div class="lg:col-span-3 max-h-[700px] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-green-500 dark:scrollbar-thumb-green-500/30 scrollbar-track-transparent">
+          <UtilsTimeline :data="experience" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-  import experience from '../list/experience';
+import experience from "../list/experience";
+
+const socialLinks = [
+  { name: 'LinkedIn', icon: 'mdi:linkedin', href: 'https://www.linkedin.com/in/farhanadityaa/' },
+  { name: 'GitHub', icon: 'mdi:github', href: 'https://github.com/AugeusAune' }
+];
 </script>
