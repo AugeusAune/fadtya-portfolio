@@ -4,7 +4,6 @@
     <div
       class="absolute left-4 sm:left-5 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-700 to-transparent pointer-events-none"
     />
-
     <div
       v-for="(item, index) in props.data"
       :key="index"
@@ -80,6 +79,45 @@
               {{ item.description }}
             </p>
 
+            <!-- Projects list -->
+            <div
+              v-if="item.projects?.length"
+              class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-800 space-y-2"
+            >
+              <p class="text-[9px] font-black uppercase tracking-widest text-gray-500 mb-2">
+                Projects
+              </p>
+              <div
+                v-for="(project, pIdx) in item.projects"
+                :key="pIdx"
+                class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-3 py-2 rounded-lg bg-gray-800/50 border border-gray-700/50 hover:border-gray-600 transition-colors"
+              >
+                <div class="min-w-0">
+                  <span class="block text-[11px] sm:text-xs font-bold text-white leading-snug">
+                    {{ project.name }}
+                  </span>
+                  <span class="block text-[9px] sm:text-[10px] text-gray-500 leading-snug">
+                    {{ project.client }}
+                  </span>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <span class="text-[9px] text-gray-500 whitespace-nowrap">
+                    {{ project.time }}
+                  </span>
+                  <span
+                    :class="[
+                      'px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider whitespace-nowrap',
+                      project.role === 'Lead Programmer'
+                        ? 'bg-blue-500/15 text-blue-400 border border-blue-500/20'
+                        : 'bg-gray-700 text-gray-400 border border-gray-600',
+                    ]"
+                  >
+                    {{ project.role }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
             <!-- Tech icons -->
             <div
               v-if="item.icon_skil?.length"
@@ -103,6 +141,5 @@
   const props = defineProps({
     data: { type: Array, required: true },
   });
-
   const isPresent = (time) => time && time.toLowerCase().includes('present');
 </script>

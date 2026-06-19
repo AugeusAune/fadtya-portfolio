@@ -41,8 +41,8 @@ const projects = [
       'logos:nuxt-icon',
       'logos:postgresql',
     ],
-    linkProject: '#',
-    isPrivat: true,
+    linkProject: 'https://e-procurement.irt.co.id',
+    isPrivat: false,
   },
   {
     title: 'Tax Projection System (DSN Group)',
@@ -51,8 +51,8 @@ const projects = [
     description:
       'Automated VAT projection system combining OCR data from SPT documents with SAP financial data for 23 subsidiary entities.',
     tech: [laravel, vue, nuxt, 'tabler:text-recognition'],
-    linkProject: '#',
-    isPrivat: true,
+    linkProject: 'https://taxfiling.dsngroup.co.id',
+    isPrivat: false,
   },
   {
     title: 'Compliance Management System (Patra Jasa)',
@@ -61,8 +61,8 @@ const projects = [
     description:
       'Centralized legal and compliance system managing COI, COC, and gratification forms integrated with employee KPI calculations.',
     tech: [laravel, vue, nuxt],
-    linkProject: '#',
-    isPrivat: true,
+    linkProject: 'https://lots.patra-jasa.com',
+    isPrivat: false,
   },
   {
     title: 'Tax Filling System (DSN Group)',
@@ -71,8 +71,8 @@ const projects = [
     description:
       'Internal system for managing tax documents leveraging OCR technology for automated reconciliation between physical documents and Excel sources.',
     tech: [laravel, vue, nuxt, 'tabler:text-recognition'],
-    linkProject: '#',
-    isPrivat: true,
+    linkProject: 'https://taxfiling.dsngroup.co.id',
+    isPrivat: false,
   },
   {
     title: 'Tax BC System (DSN Group)',

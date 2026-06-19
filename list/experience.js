@@ -1,90 +1,29 @@
 export default [
   {
-    time: 'Oct 2025 - Present',
-    title: 'PT Lamjaya Global Solusi - Indo Raya Tenaga (Procurement)',
-    status: 'Programmer',
+    time: 'Jun 2022 - Present',
+    title: 'PT Lamjaya Global Solusi',
+    status: 'Fullstack Programmer',
     description:
-      'I contributed to the development of the Contract & Procurement System for PT Indo Raya Tenaga, an internal application designed to manage contract lifecycle, purchase orders, and vendor relationships in a structured and approval-based workflow.',
+      'Developed and maintained enterprise web applications for multiple large-scale clients across energy, mining, insurance, and taxation sectors. Handled full-cycle development from system design to production deployment. Built systems covering procurement, contract management, tax filing & projection, and compliance management. Leveraged Redis for caching and background job queues, and deployed all applications via Docker across development and production environments.',
+    projects: [
+      { client: 'Indo Raya Tenaga', name: 'Procurement System', time: 'Oct 2025 - Present', role: 'Full Stack Programmer' },
+      { client: 'PT Dharma Satya Nusantara TBK', name: 'Tax Projection', time: 'Oct 2025 - Dec 2025', role: 'Full Stack Programmer' },
+      { client: 'PT Patra Jasa', name: 'Compliance Management System', time: 'Nov 2024 - Feb 2025', role: 'Full Stack Programmer' },
+      { client: 'PT Dharma Satya Nusantara TBK', name: 'Tax Filing', time: 'Jun 2024 - Oct 2024', role: 'Full Stack Programmer' },
+      { client: 'PT Dharma Satya Nusantara TBK', name: 'Tax BC', time: 'Jan 2023 - Jul 2023', role: 'Full Stack Programmer' },
+      { client: 'PT Asuransi Tugu Pratama Indonesia', name: 'Compliance Management', time: 'Jan 2023 - Jul 2023', role: 'Full Stack Programmer' },
+      { client: 'PT Merdeka Copper Gold', name: 'Contract Management', time: 'Jun 2022 - Nov 2022', role: 'Full Stack Programmer' },
+    ],
     icon_skil: [
+      'logos:laravel',
+      'logos:vue',
+      'logos:nuxt-icon',
+      'logos:postgresql',
+      'logos:redis',
+      'logos:docker-icon',
       'skill-icons:elysia-dark',
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:postgresql',
-    ],
-  },
-  {
-    time: 'Oct 2025 - Dec 2025',
-    title:
-      'PT Lamjaya Global Solusi - PT Dharma Satya Nusantara TBK (Tax Projection)',
-    status: 'Lead Programmer',
-    description:
-      'Contributed to the development of Tax Projection, an internal system designed to monitor and project VAT (PPN) across 23 subsidiary entities. The system reads SPT Induk documents via OCR and combines SAP-based data to generate accurate monthly PPN projections.',
-    icon_skil: [
-      'logos:laravel',
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:postgresql',
       'tabler:text-recognition',
     ],
-  },
-  {
-    time: 'Nov 2024 - Feb 2025',
-    title:
-      'PT Lamjaya Global Solusi - PT Patra Jasa (Compliance Management System)',
-    status: 'Lead Programmer',
-    description:
-      'Involved in the development of the Compliance & Legal System for PT Patra Jasa, designed to centralize and document employee compliance and legal processes, ensuring governance aligns with corporate regulations.',
-    icon_skil: [
-      'logos:laravel',
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:postgresql',
-    ],
-  },
-  {
-    time: 'Jun 2024 - Oct 2024',
-    title:
-      'PT Lamjaya Global Solusi - PT Dharma Satya Nusantara TBK (Tax Filling)',
-    status: 'Lead Programmer',
-    description:
-      'Developed Tax Filing, an internal system for managing tax documents across multiple entities. It leverages OCR technology and enables automated reconciliation between document data and Excel-based sources.',
-    icon_skil: [
-      'logos:laravel',
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:postgresql',
-      'tabler:text-recognition',
-    ],
-  },
-  {
-    time: 'Jan 2023 - Jul 2023',
-    title: 'PT Lamjaya Global Solusi - PT Dharma Satya Nusantara TBK (Tax BC)',
-    status: 'Programmer',
-    description:
-      'Developed the Tax BC system, a web-based internal application integrating OCR technology (Tesseract) to extract text from tax documents and synchronizing it with SAP for seamless integration.',
-    icon_skil: [
-      'logos:laravel',
-      'logos:vue',
-      'logos:postgresql',
-      'tabler:text-recognition',
-    ],
-  },
-  {
-    time: 'Jan 2023 - Jul 2023',
-    title: 'PT Lamjaya Global Solusi - PT Asuransi Tugu Pratama Indonesia',
-    status: 'Programmer',
-    description:
-      'Developed a web-based Compliance Management System using Laravel, replacing manual spreadsheets. Improved reporting efficiency by 80% and reduced admin errors by 65%.',
-    icon_skil: ['logos:laravel', 'logos:php', 'logos:postgresql'],
-  },
-  {
-    time: 'Jun 2022 - Nov 2022',
-    title:
-      'PT Lamjaya Global Solusi - PT Merdeka Copper Gold (Contract Management)',
-    status: 'Programmer',
-    description:
-      'Developed Merdeka Contract Management, a web-based system designed to digitize and streamline the organizational contract workflow using Laravel API and Nuxt.js frontend.',
-    icon_skil: ['logos:laravel', 'logos:nuxt-icon', 'logos:postgresql'],
   },
   {
     time: 'Dec 2021 - Feb 2022',

@@ -1,6 +1,8 @@
 <template>
   <div
     class="group h-full flex flex-col border border-slate-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-[#0f172a] hover:border-blue-500/40 transition-all duration-300 overflow-hidden w-full hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5"
+    :class="isPrivat ? '' : 'cursor-pointer'"
+    @click="openLinkProject"
   >
     <!-- Image -->
     <div class="relative h-44 overflow-hidden">
@@ -59,4 +61,10 @@
     linkProject: { type: String, required: true },
     isPrivat: { type: Boolean, required: false, default: false },
   });
+
+  const openLinkProject = () => {
+    if (props.linkProject) {
+      window.open(props.linkProject, '_blank');
+    }
+  };
 </script>
