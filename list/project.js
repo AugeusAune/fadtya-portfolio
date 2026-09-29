@@ -1,5 +1,3 @@
-// Lmao Pisan Kang
-
 const icon = {
   html: 'vscode-icons:file-type-html',
   css: 'vscode-icons:file-type-css',

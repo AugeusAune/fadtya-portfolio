@@ -8,7 +8,7 @@
           class="grid lg:grid-cols-2 grid-cols-1 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 dark:divide-gray-800"
         >
           <!-- Left -->
-          <div class="p-6 sm:p-10 bg-slate-50/50 dark:bg-gray-900/20">
+          <div class="p-6 sm:p-10 bg-slate-50/50 dark:bg-gray-900/20 reveal-on-scroll">
             <div
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-6"
             >
@@ -17,18 +17,17 @@
             <h2
               class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-4"
             >
-              Let's build <br />
+              Get in touch for <br />
               <span
                 class="text-blue-500 underline decoration-blue-500/30 underline-offset-4"
-                >something</span
+                >technical</span
               >
-              great.
+              collaboration.
             </h2>
             <p
               class="text-sm text-slate-600 dark:text-gray-400 mb-8 max-w-md leading-relaxed"
             >
-              Have a project in mind? Reach out and let's turn your ideas into
-              high-performance digital reality.
+              Available for full-stack engineering roles, enterprise systems consulting, or backend architecture discussions.
             </p>
 
             <div class="space-y-3">
@@ -67,7 +66,7 @@
           </div>
 
           <!-- Right -->
-          <div class="p-6 sm:p-10 bg-white dark:bg-transparent">
+          <div class="p-6 sm:p-10 bg-white dark:bg-transparent reveal-on-scroll stagger-delay-2">
             <form @submit.prevent="sendMessage" class="space-y-5">
               <div class="space-y-3">
                 <div class="group relative">
@@ -124,7 +123,7 @@
                       v-model="form.message"
                       rows="4"
                       required
-                      placeholder="Briefly describe your vision..."
+                      placeholder="Describe your project, timeline, or inquiry..."
                       class="w-full pl-11 pr-4 py-3.5 bg-slate-50 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm text-slate-900 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-gray-600 resize-none"
                     ></textarea>
                   </div>
@@ -139,7 +138,7 @@
                   class="absolute inset-0 bg-blue-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
                 ></div>
                 <span class="relative flex items-center justify-center gap-2">
-                  Shoot Message
+                  Send Message
                   <Icon
                     name="ph:paper-plane-tilt-fill"
                     class="text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"

@@ -9,7 +9,11 @@
       <img
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         :src="props.imageSrc"
-        alt="Project Image"
+        :alt="props.title"
+        loading="lazy"
+        decoding="async"
+        width="800"
+        height="450"
       />
       <div
         class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"

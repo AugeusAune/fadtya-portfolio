@@ -2,7 +2,7 @@
   <div class="relative py-16 lg:py-24 overflow-hidden">
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
       <!-- Text Side -->
-      <div class="relative z-10 text-center lg:text-left">
+      <div class="relative z-10 text-center lg:text-left reveal-on-scroll">
         <div
           class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-5"
         >
@@ -18,21 +18,21 @@
         </div>
 
         <h1
-          class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight"
+          class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-[1.15] tracking-tight"
         >
-          Crafting Digital<br />
-          <span class="text-blue-500">Experiences</span> That Matter
+          Engineering Scalable Apps &amp;<br />
+          <span class="text-blue-500">Robust Distributed</span> Systems
         </h1>
 
         <p
-          class="mt-5 text-sm text-slate-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto lg:mx-0"
+          class="mt-5 text-sm sm:text-base text-slate-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto lg:mx-0"
         >
           I'm
           <span
             class="font-bold text-slate-900 dark:text-white underline decoration-blue-500/30"
             >Farhan Aditya</span
-          >, a Full Stack Developer dedicated to building efficient, scalable,
-          and user-centric applications for modern businesses.
+          >
+          — a Full Stack Engineer focused on high-throughput backend services, TypeScript, Nuxt 4, and reliable enterprise systems.
         </p>
 
         <div
@@ -42,7 +42,7 @@
             href="#projects"
             class="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20"
           >
-            View My Projects
+            View Case Studies
           </a>
           <a
             href="/cv.pdf"
@@ -56,9 +56,9 @@
       </div>
 
       <!-- Code Block Side -->
-      <div class="relative hidden lg:block group">
+      <div class="relative hidden lg:block group reveal-on-scroll stagger-delay-2">
         <div
-          class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"
+          class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur opacity-25 animate-soft-glow group-hover:opacity-50 transition duration-1000"
         ></div>
         <div
           class="relative bg-[#0f172a] rounded-2xl shadow-xl overflow-hidden border border-gray-800"
@@ -72,7 +72,7 @@
               <div class="w-2.5 h-2.5 rounded-full bg-blue-500/50"></div>
             </div>
             <div class="text-[10px] text-gray-500 font-mono">
-              DeveloperIdentity.js
+              engineer.service.ts
             </div>
             <Icon name="ph:copy-bold" class="text-gray-600 text-xs" />
           </div>
@@ -86,28 +86,22 @@
 </template>
 
 <script setup>
-  const birthDate = new Date('2003-10-21');
-  const today = new Date();
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
+  const code = `import { Elysia, t } from "elysia";
+import { queryDatabase } from "./db";
 
-  const code = `const developer = {
-  name: "Farhan Aditya",
-  role: "Full Stack Developer",
-  experience: "4+ Years",
-  skills: ["Vue/Nuxt", "Laravel", "Postgres", "Elysia.js"],
-  status: "Available_For_Hiring",
-  location: "Jakarta, Indonesia",
-  motto: "Code for life, life for code"
-};
-function deliverExcellence(project) {
-  return project.transform({
-    quality: "Premium",
-    speed: "Fast",
-    result: "Perfect"
-  });
-}`;
+export const engineer = new Elysia({ prefix: "/api/v1" })
+  .get("/profile", async () => ({
+    name: "Farhan Aditya",
+    title: "Full Stack Engineer",
+    location: "Jakarta, Indonesia",
+    coreStack: ["Nuxt 4", "Elysia.js", "Laravel", "PostgreSQL"],
+    systemsDelivered: ["Procurement ERP", "Tax Projection", "Compliance"]
+  }))
+  .get("/metrics", async () => {
+    return await queryDatabase.getSystemHealth();
+  }, {
+    response: t.Object({ uptime: t.String(), latency: t.String() })
+  });`;
 </script>
 
 <style scoped>

@@ -20,8 +20,7 @@
           <p
             class="text-slate-500 dark:text-gray-500 text-xs max-w-xs leading-relaxed"
           >
-            Built with passion and modern technology. Focused on delivering
-            high-quality digital solutions.
+            Built with Nuxt 4, Tailwind CSS, and optimized static prerendering.
           </p>
         </div>
 

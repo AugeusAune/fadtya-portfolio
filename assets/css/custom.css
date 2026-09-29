@@ -1,6 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* Clean typography */
 * {
-    font-family: "Public Sans", sans-serif;
-    font-optical-sizing: auto;
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Scroll reveal entrance animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger delay utilities */
+.stagger-delay-1 { transition-delay: 100ms; }
+.stagger-delay-2 { transition-delay: 200ms; }
+.stagger-delay-3 { transition-delay: 300ms; }
+.stagger-delay-4 { transition-delay: 400ms; }
+.stagger-delay-5 { transition-delay: 500ms; }
+.stagger-delay-6 { transition-delay: 600ms; }
+
+/* Micro-animations */
+@keyframes softGlow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.03); }
+}
+
+.animate-soft-glow {
+  animation: softGlow 6s ease-in-out infinite;
+}
+
+/* Accessibility: Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

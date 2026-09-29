@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-5 grid-cols-1 gap-16 items-start">
         <!-- Sidebar — sticky beneran -->
-        <aside class="lg:col-span-2 lg:sticky lg:top-24 space-y-8">
+        <aside class="lg:col-span-2 lg:sticky lg:top-24 space-y-8 reveal-on-scroll">
           <!-- Badge + Heading -->
           <div class="space-y-4">
             <span
@@ -19,10 +19,7 @@
             <p
               class="text-sm text-slate-500 dark:text-gray-400 leading-relaxed"
             >
-              I have transformed coding into a lifelong craft. From my first
-              lines of code to leading complex enterprise engineering projects,
-              I view every challenge as an opportunity to build something
-              exceptional.
+              Specializing in enterprise procurement systems, automated OCR tax reconciliation, and scalable web architectures across multi-entity corporations.
             </p>
           </div>
 
@@ -49,7 +46,7 @@
         </aside>
 
         <!-- Timeline -->
-        <div class="lg:col-span-3 pb-12">
+        <div class="lg:col-span-3 pb-12 reveal-on-scroll stagger-delay-2">
           <UtilsTimeline :data="experience" />
         </div>
       </div>
