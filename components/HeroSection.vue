@@ -22,7 +22,7 @@
         >
           I'm
           <span class="font-bold text-slate-900 dark:text-white">Farhan Aditya</span>,
-          a Full Stack Engineer building high-throughput backend services, TypeScript applications, Nuxt 4 architectures, and mission-critical enterprise systems.
+          a Full Stack Engineer building high-throughput services, scalable web applications, and mission-critical enterprise systems.
         </p>
 
         <div
@@ -34,14 +34,14 @@
           >
             View Projects
           </a>
-          <a
-            href="/cv.pdf"
-            download
+          <button
+            type="button"
+            @click="isCvModalOpen = true"
             class="px-6 py-3.5 rounded-xl bg-white dark:bg-gray-800 text-slate-800 dark:text-slate-100 border border-slate-300/80 dark:border-gray-700 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-gray-700 transition-all duration-200 flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 shadow-sm text-center min-h-[44px]"
           >
             <Icon name="ph:file-pdf-bold" class="text-base text-blue-600 dark:text-blue-400" />
-            Download Resume
-          </a>
+            <span>View Resume</span>
+          </button>
         </div>
       </div>
 
@@ -80,23 +80,29 @@
 
             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-gray-800/40 border border-slate-200/70 dark:border-gray-700/50">
               <div class="text-xs font-bold text-slate-900 dark:text-white mb-1">
-                Full-Stack Architecture
+                Compliance &amp; Governance
               </div>
               <div class="text-[11px] text-slate-600 dark:text-gray-400 leading-relaxed">
-                Nuxt 4, Vue 3, TypeScript, Elysia.js, Laravel, Redis queues, and Docker.
+                Centralized legal, COI, and corporate compliance system for PT Patra Jasa.
               </div>
             </div>
           </div>
 
           <div class="pt-4 border-t border-slate-100 dark:border-gray-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-gray-400">
-            <span>Primary Core</span>
-            <span class="font-bold text-slate-800 dark:text-slate-200">TypeScript · SQL · Docker</span>
+            <span>Engineering Standard</span>
+            <span class="font-bold text-slate-800 dark:text-slate-200">High Reliability · Clean Architecture</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- CV Viewer Popup Modal -->
+    <UtilsCvViewerModal v-model="isCvModalOpen" />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const isCvModalOpen = ref(false);
 </script>

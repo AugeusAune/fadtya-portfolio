@@ -8,19 +8,15 @@ export interface SiteMetadata {
 }
 
 export const getSiteMetadata = (): SiteMetadata => ({
-  title: "Farhan Aditya | Full Stack Developer & Software Engineer",
-  description: "Farhan Aditya is a passionate Full Stack Developer specializing in high-performance web applications, Vue/Nuxt, Laravel, and scalable modern architectures.",
+  title: "Farhan Aditya | Full Stack Engineer",
+  description: "Farhan Aditya is a Full Stack Engineer building high-throughput backend services, scalable web applications, and mission-critical enterprise systems.",
   url: "https://fadtya-portfolio.vercel.app",
   image: "/image/hire.png",
   author: "Farhan Aditya",
   keywords: [
     "Farhan Aditya",
-    "Full Stack Developer",
+    "Full Stack Engineer",
     "Software Engineer",
-    "Nuxt 4",
-    "Vue.js",
-    "Laravel",
-    "Tailwind CSS",
     "Web Developer Indonesia",
     "Portfolio"
   ]
@@ -34,7 +30,7 @@ export const generatePersonSchema = () => {
     name: meta.author,
     url: meta.url,
     image: `${meta.url}${meta.image}`,
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Full Stack Engineer",
     knowsAbout: [
       "JavaScript",
       "TypeScript",

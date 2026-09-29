@@ -20,7 +20,7 @@
           <p
             class="text-slate-500 dark:text-gray-500 text-xs max-w-xs leading-relaxed"
           >
-            Built with Nuxt 4, Tailwind CSS, and optimized static prerendering.
+            Farhan Aditya · Full Stack Engineer
           </p>
         </div>
 
