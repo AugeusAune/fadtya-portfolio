@@ -1,23 +1,16 @@
 <template>
   <div class="px-4 sm:px-6 py-16 lg:py-24" id="skills">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col items-center text-center mb-8 sm:mb-14 reveal-on-scroll">
-        <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-3"
-        >
-          Tech Stack
-        </div>
+      <div class="flex flex-col items-center text-center mb-10 sm:mb-14 reveal-on-scroll">
         <h2
           class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white leading-tight"
         >
-          Modern Skills For<br />
-          <span class="text-blue-500">Modern Solutions</span>
+          Technical Stack &amp; <span class="text-blue-600 dark:text-blue-400">Expertise</span>
         </h2>
         <p
-          class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-gray-400 max-w-xl mx-auto leading-relaxed"
+          class="mt-3 text-sm sm:text-base text-slate-600 dark:text-gray-300 max-w-xl mx-auto leading-relaxed"
         >
-          A comprehensive suite of technologies I've mastered to deliver
-          high-performance, maintainable, and scalable software.
+          Core languages, frameworks, and architectural tools utilized across production systems and high-throughput web applications.
         </p>
       </div>
 

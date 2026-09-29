@@ -5,13 +5,10 @@
         <!-- Sidebar Info -->
         <div class="lg:col-span-2 lg:sticky lg:top-24 space-y-8 reveal-on-scroll">
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
-              Academic Background
-            </div>
-            <h2 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight flex items-center gap-4" >
-              Academic <span class="text-blue-500">Foundation</span>
+            <h2 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight flex items-center gap-4">
+              Academic <span class="text-blue-600 dark:text-blue-400">Foundation</span>
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 dark:text-gray-400 mt-6 leading-relaxed" >
+            <p class="text-sm sm:text-base text-slate-600 dark:text-gray-300 mt-6 leading-relaxed">
               Formal training in Informatics Engineering, combined with continuous hands-on research into database performance, distributed architectures, and modern web frameworks.
             </p>
           </div>

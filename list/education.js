@@ -3,12 +3,13 @@ export default [
     time: 'Aug 2024 - Sep 2028 (Expected)',
     title: 'Universitas Terbuka',
     status: 'Bachelor of Information Systems',
-    description: 'Studying Information Systems to expand technical knowledge and business alignment.',
+    description:
+      'Studying Information Systems to expand technical knowledge and business alignment.',
     icon_skil: ['logos:vue', 'logos:javascript'],
   },
   {
     time: 'Jan 2020 - Jun 2022',
-    title: 'IT CLUB - SMKN 12 Jakarta (Mentorship)',
+    title: 'IT Club, SMKN 12 Jakarta (Mentorship)',
     status: 'Mentor',
     description:
       'Guided members in understanding core IT concepts, solving practical challenges, and building portfolios in web development and UI/UX design.',

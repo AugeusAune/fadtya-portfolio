@@ -14,16 +14,21 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-6 lg:gap-8">
-          <a v-for="item in navItems" :key="item.id" :href="item.href" class="text-slate-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-500 font-bold text-xs uppercase tracking-widest transition-colors">
+          <a v-for="item in navItems" :key="item.id" :href="item.href" class="text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold text-xs uppercase tracking-wider transition-colors">
             {{ item.name }}
           </a>
         </div>
 
         <!-- Right: Theme Toggle & Menu -->
         <div class="flex items-center gap-3">
-          <!-- Theme Toggle (Prominent) -->
-          <button @click="toggleTheme" class="flex items-center justify-center p-2.5 rounded-xl bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-yellow-400 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-500 transition-all active:scale-90 shadow-lg border border-slate-200 dark:border-gray-700" aria-label="Toggle Theme">
-            <Icon :name="colorMode.value === 'dark' ? 'ph:moon-stars-fill' : 'ph:sun-fill'" class="text-xl" />
+          <!-- Theme Toggle -->
+          <button
+            @click="toggleTheme"
+            class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-gray-800 dark:hover:bg-gray-700 text-slate-700 dark:text-amber-400 transition-all duration-200 active:scale-95 border border-slate-200/80 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+            :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+            :title="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          >
+            <Icon :name="colorMode.value === 'dark' ? 'ph:moon-stars-fill' : 'ph:sun-dim-fill'" class="text-xl transition-transform duration-300 hover:rotate-12" />
           </button>
           
           <!-- Socials (Desktop) -->
