@@ -88,7 +88,7 @@
             </div>
           </div>
 
-          <div class="pt-4 border-t border-slate-100 dark:border-gray-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-gray-400">
+          <div class="pt-4 border-t border-slate-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px] text-slate-500 dark:text-gray-400">
             <span>Engineering Standard</span>
             <span class="font-bold text-slate-800 dark:text-slate-200">High Reliability · Clean Architecture</span>
           </div>

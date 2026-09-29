@@ -26,31 +26,31 @@
 
         <!-- Nav -->
         <div
-          class="flex flex-wrap justify-center gap-1 sm:gap-3 text-xs font-bold uppercase tracking-wider"
+          class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-semibold"
         >
           <a
             href="#about"
-            class="px-2.5 py-2 min-h-[44px] flex items-center text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="py-2.5 px-2 min-h-[44px] flex items-center text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Experience</a
           >
           <a
             href="#education"
-            class="px-2.5 py-2 min-h-[44px] flex items-center text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="py-2.5 px-2 min-h-[44px] flex items-center text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Education</a
           >
           <a
             href="#skills"
-            class="px-2.5 py-2 min-h-[44px] flex items-center text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="py-2.5 px-2 min-h-[44px] flex items-center text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Skills</a
           >
           <a
             href="#projects"
-            class="px-2.5 py-2 min-h-[44px] flex items-center text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="py-2.5 px-2 min-h-[44px] flex items-center text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Projects</a
           >
           <a
             href="#contact"
-            class="px-2.5 py-2 min-h-[44px] flex items-center text-slate-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="py-2.5 px-2 min-h-[44px] flex items-center text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Contact</a
           >
         </div>
@@ -76,7 +76,7 @@
             </a>
           </div>
           <p
-            class="text-[9px] text-slate-400 dark:text-gray-600 font-bold uppercase tracking-widest"
+            class="text-[11px] text-slate-500 dark:text-gray-500 text-center md:text-right"
           >
             © {{ year }} Farhan Aditya. All Rights Reserved.
           </p>
