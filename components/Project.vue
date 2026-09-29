@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 sm:px-6 py-16 lg:py-24" id="projects">
+  <div class="px-4 sm:px-6 py-12 sm:py-16 lg:py-24" id="projects">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col items-center text-center mb-10 sm:mb-14 reveal-on-scroll">
         <h2

@@ -1,7 +1,7 @@
 <template>
-  <div class="px-6 py-24 lg:py-32" id="education">
+  <div class="px-4 sm:px-6 py-12 sm:py-16 lg:py-24" id="education">
     <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-5 grid-cols-1 gap-16 items-start">
+      <div class="grid lg:grid-cols-5 grid-cols-1 gap-8 lg:gap-16 items-start">
         <!-- Sidebar Info -->
         <div class="lg:col-span-2 lg:sticky lg:top-24 space-y-8 reveal-on-scroll">
           <div>

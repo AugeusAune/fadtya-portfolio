@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 sm:px-6 py-16 lg:py-24" id="contact">
+  <div class="px-4 sm:px-6 py-12 sm:py-16 lg:py-24" id="contact">
     <div class="max-w-6xl mx-auto">
       <div
         class="bg-white dark:bg-gray-900/50 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl backdrop-blur-xl"
@@ -8,7 +8,7 @@
           class="grid lg:grid-cols-2 grid-cols-1 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 dark:divide-gray-800"
         >
           <!-- Left -->
-          <div class="p-6 sm:p-10 bg-slate-50/50 dark:bg-gray-900/20 reveal-on-scroll">
+          <div class="p-5 sm:p-8 lg:p-10 bg-slate-50/50 dark:bg-gray-900/20 reveal-on-scroll">
             <h2
               class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-4"
             >
@@ -61,7 +61,7 @@
           </div>
 
           <!-- Right -->
-          <div class="p-6 sm:p-10 bg-white dark:bg-transparent reveal-on-scroll stagger-delay-2">
+          <div class="p-5 sm:p-8 lg:p-10 bg-white dark:bg-transparent reveal-on-scroll stagger-delay-2">
             <form @submit.prevent="sendMessage" class="space-y-5">
               <div class="space-y-3">
                 <div class="group relative">

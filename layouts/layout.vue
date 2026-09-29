@@ -1,5 +1,5 @@
 <template>
-  <div class="main min-h-screen bg-[#f8fafc] text-slate-900 dark:bg-[#020420] dark:text-white transition-colors duration-300">
+  <div class="main min-h-screen w-full overflow-x-hidden bg-[#f8fafc] text-slate-900 dark:bg-[#020420] dark:text-white transition-colors duration-300">
     <NavBar />
     <slot />
   </div>

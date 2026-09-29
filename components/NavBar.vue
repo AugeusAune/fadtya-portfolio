@@ -41,26 +41,61 @@
             </a>
           </div>
 
-          <!-- Mobile Toggle -->
-          <button @click="isMenuOpen = !isMenuOpen" class="md:hidden p-2 text-slate-600 dark:text-gray-400 rounded-xl hover:bg-slate-100 dark:hover:bg-gray-800 transition-all" aria-label="Menu">
+          <!-- Mobile Menu Toggle Button (44px target) -->
+          <button
+            @click="isMenuOpen = !isMenuOpen"
+            class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+            :aria-expanded="isMenuOpen"
+            aria-label="Toggle navigation menu"
+          >
             <Icon :name="isMenuOpen ? 'ph:x-bold' : 'ph:list-bold'" class="text-2xl" />
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <Transition enter-active-class="transition duration-200 ease-out" enter-from-class="transform -translate-y-4 opacity-0" enter-to-class="transform translate-y-0 opacity-100" leave-active-class="transition duration-150 ease-in" leave-from-class="transform translate-y-0 opacity-100" leave-to-class="transform -translate-y-4 opacity-0">
-      <div v-if="isMenuOpen" class="md:hidden absolute top-16 inset-x-0 bg-white dark:bg-[#020420] border-b border-gray-200 dark:border-gray-800 px-6 py-8 space-y-6 shadow-2xl overflow-y-auto max-h-[80vh]">
-        <a v-for="item in navItems" :key="item.id" :href="item.href" @click="isMenuOpen = false" class="block text-2xl font-black text-slate-400 dark:text-gray-500 hover:text-blue-500 transition-colors tracking-tighter">
-          {{ item.name }}
-        </a>
-        <div class="flex gap-6 pt-6 border-t border-gray-100 dark:border-gray-800">
-          <a href="https://github.com/AugeusAune" target="_blank" class="text-slate-400 dark:text-gray-500 text-3xl">
-            <Icon name="mdi:github" />
+    <!-- Mobile Drawer & Backdrop -->
+    <Transition
+      enter-active-class="transition duration-200 ease-out"
+      enter-from-class="opacity-0 -translate-y-2"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-150 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 -translate-y-2"
+    >
+      <div
+        v-if="isMenuOpen"
+        class="md:hidden absolute top-16 inset-x-0 bg-white/95 dark:bg-[#020420]/95 backdrop-blur-xl border-b border-slate-200 dark:border-gray-800 px-5 py-6 shadow-2xl overflow-y-auto max-h-[calc(100dvh-4rem)]"
+      >
+        <div class="space-y-1">
+          <a
+            v-for="item in navItems"
+            :key="item.name"
+            :href="item.href"
+            @click="isMenuOpen = false"
+            class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold text-slate-800 dark:text-slate-100 hover:bg-slate-100/80 dark:hover:bg-gray-800/80 hover:text-blue-600 dark:hover:text-blue-400 transition-all active:scale-[0.99]"
+          >
+            <span>{{ item.name }}</span>
+            <Icon name="ph:caret-right-bold" class="text-sm text-slate-400 dark:text-gray-600" />
           </a>
-          <a href="https://linkedin.com/in/farhanadityaa" target="_blank" class="text-slate-400 dark:text-gray-500 text-3xl">
-            <Icon name="mdi:linkedin" />
+        </div>
+
+        <div class="flex items-center gap-3 pt-5 mt-4 border-t border-slate-200/80 dark:border-gray-800">
+          <a
+            href="https://github.com/AugeusAune"
+            target="_blank"
+            class="flex items-center justify-center w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <Icon name="mdi:github" class="text-xl" />
+          </a>
+          <a
+            href="https://linkedin.com/in/farhanadityaa"
+            target="_blank"
+            class="flex items-center justify-center w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="LinkedIn Profile"
+          >
+            <Icon name="mdi:linkedin" class="text-xl" />
           </a>
         </div>
       </div>
@@ -69,7 +104,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 
 const colorMode = useColorMode();
 const isMenuOpen = ref(false);
@@ -86,4 +121,27 @@ const navItems = [
 const toggleTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
 };
+
+const handleKeyDown = (e) => {
+  if (e.key === 'Escape' && isMenuOpen.value) {
+    isMenuOpen.value = false;
+  }
+};
+
+watch(isMenuOpen, (open) => {
+  if (import.meta.client) {
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+});
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown);
+});
+
+onUnmounted(() => {
+  if (import.meta.client) {
+    document.body.style.overflow = '';
+  }
+  window.removeEventListener('keydown', handleKeyDown);
+});
 </script>

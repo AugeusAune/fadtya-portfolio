@@ -26,18 +26,18 @@
         </p>
 
         <div
-          class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mt-8"
+          class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-3.5 mt-8"
         >
           <a
             href="#projects"
-            class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md"
+            class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md text-center min-h-[44px] flex items-center justify-center"
           >
             View Projects
           </a>
           <a
             href="/cv.pdf"
             download
-            class="px-6 py-3.5 rounded-xl bg-white dark:bg-gray-800 text-slate-800 dark:text-slate-100 border border-slate-300/80 dark:border-gray-700 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-gray-750 transition-all duration-200 flex items-center gap-2 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
+            class="px-6 py-3.5 rounded-xl bg-white dark:bg-gray-800 text-slate-800 dark:text-slate-100 border border-slate-300/80 dark:border-gray-700 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-gray-700 transition-all duration-200 flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 shadow-sm text-center min-h-[44px]"
           >
             <Icon name="ph:file-pdf-bold" class="text-base text-blue-600 dark:text-blue-400" />
             Download Resume
