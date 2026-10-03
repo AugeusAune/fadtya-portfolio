@@ -1,7 +1,7 @@
 <template>
-  <div
+  <aside
     v-if="vscode.isSidebarOpen.value"
-    class="w-60 md:w-64 h-full bg-[var(--vscode-sidebar-bg)] border-r border-[var(--vscode-border)] flex flex-col select-none text-xs text-[var(--vscode-text-muted)] shrink-0 z-20"
+    class="fixed md:relative top-9 md:top-auto bottom-6 md:bottom-auto left-12 md:left-auto z-40 md:z-20 w-72 max-w-[calc(100vw-3.25rem)] md:w-64 h-[calc(100vh-3.75rem)] md:h-full bg-[var(--vscode-sidebar-bg)] border-r border-[var(--vscode-border)] flex flex-col select-none text-xs text-[var(--vscode-text-muted)] shrink-0 shadow-2xl md:shadow-none transition-all duration-200"
   >
     <!-- Header -->
     <div class="h-9 px-4 flex items-center justify-between font-bold tracking-wider text-[11px] text-[var(--vscode-text)] border-b border-[var(--vscode-border)]/40">
@@ -35,7 +35,7 @@
             <div
               v-for="file in vscode.openFiles.value"
               :key="file.id"
-              @click="vscode.openFile(file.id)"
+              @click="handleOpenFile(file.id)"
               :class="[
                 'group px-4 py-1 flex items-center justify-between cursor-pointer transition-colors',
                 vscode.activeFileId.value === file.id
@@ -85,7 +85,7 @@
               <div
                 v-for="file in getFolderFiles(folder)"
                 :key="file.id"
-                @click="vscode.openFile(file.id)"
+                @click="handleOpenFile(file.id)"
                 :class="[
                   'px-4 py-1 flex items-center gap-2 cursor-pointer transition-colors',
                   vscode.activeFileId.value === file.id
@@ -121,7 +121,7 @@
           <div
             v-for="file in searchResults"
             :key="file.id"
-            @click="vscode.openFile(file.id)"
+            @click="handleOpenFile(file.id)"
             class="p-2 rounded bg-[var(--vscode-bg)]/40 hover:bg-[var(--vscode-bg)] border border-[var(--vscode-border)] cursor-pointer space-y-1 transition-colors"
           >
             <div class="flex items-center gap-2 font-bold text-[var(--vscode-text)]">
@@ -223,7 +223,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script setup lang="ts">
@@ -249,6 +249,13 @@ const toggleFolder = (folder: string): void => {
 
 const getFolderFiles = (folder: 'src' | 'docs' | 'config'): VFSFile[] => {
   return getFilesByFolder(folder);
+};
+
+const handleOpenFile = (fileId: string): void => {
+  vscode.openFile(fileId);
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    vscode.toggleSidebar(false);
+  }
 };
 
 const activeViewTitle = computed((): string => {

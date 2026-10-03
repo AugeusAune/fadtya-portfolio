@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:p-10 max-w-6xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-6xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Header -->
     <div class="border-b border-[var(--vscode-border)] pb-4 space-y-1">
       <div class="text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
@@ -14,14 +14,14 @@
     </div>
 
     <!-- Project Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
       <div
         v-for="project in projects"
         :key="project.title"
         class="group rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 overflow-hidden flex flex-col hover:border-[var(--vscode-accent)]/50 transition-all duration-300 shadow-md hover:shadow-xl"
       >
         <!-- Thumbnail -->
-        <div class="relative h-48 w-full overflow-hidden bg-slate-900">
+        <div class="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
           <img
             :src="project.imageSrc"
             :alt="project.title"
@@ -46,7 +46,7 @@
         </div>
 
         <!-- Body -->
-        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <h3 class="text-lg font-bold text-[var(--vscode-text)] group-hover:text-[var(--vscode-accent)] transition-colors">
               {{ project.title }}

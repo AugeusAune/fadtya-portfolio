@@ -1,15 +1,15 @@
 <template>
   <footer class="h-6 w-full bg-[var(--vscode-statusbar-bg)] text-white text-[11px] flex items-center justify-between px-2 select-none shrink-0 z-30 font-medium">
     <!-- Left: Git & Diagnostics -->
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-1.5 sm:gap-3 min-w-0">
       <!-- Git Branch -->
       <button
         @click="vscode.setActivity('git')"
-        class="flex items-center gap-1.5 px-1.5 py-0.5 rounded hover:bg-white/20 transition-colors"
+        class="flex items-center gap-1 sm:gap-1.5 px-1.5 py-0.5 rounded hover:bg-white/20 transition-colors max-w-[130px] sm:max-w-none truncate"
         title="Current Git Branch"
       >
-        <Icon name="mdi:source-branch" class="text-sm" />
-        <span class="font-semibold">feature/vscode-style-portfolio</span>
+        <Icon name="mdi:source-branch" class="text-sm shrink-0" />
+        <span class="font-semibold truncate">feature/vscode-style-portfolio</span>
       </button>
 
       <!-- Sync Status -->

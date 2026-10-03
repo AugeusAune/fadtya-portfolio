@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:p-10 max-w-4xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Header -->
     <div class="border-b border-[var(--vscode-border)] pb-4 space-y-1">
       <div class="text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
@@ -14,16 +14,16 @@
     </div>
 
     <!-- Quick Channels -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
       <a
         v-for="channel in contactChannels"
         :key="channel.name"
         :href="channel.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-3 p-4 rounded-xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:bg-[var(--vscode-accent)]/10 hover:border-[var(--vscode-accent)]/50 transition-all group"
+        class="flex items-center gap-3 p-3.5 sm:p-4 rounded-xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:bg-[var(--vscode-accent)]/10 hover:border-[var(--vscode-accent)]/50 transition-all group"
       >
-        <div class="w-10 h-10 rounded-lg bg-[var(--vscode-bg)] flex items-center justify-center p-2 border border-[var(--vscode-border)]">
+        <div class="w-10 h-10 rounded-lg bg-[var(--vscode-bg)] flex items-center justify-center p-2 border border-[var(--vscode-border)] shrink-0">
           <Icon :name="channel.icon" class="text-xl group-hover:scale-110 transition-transform" />
         </div>
         <div class="overflow-hidden">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Interactive Message Form -->
-    <div class="rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/50 p-6 md:p-8 space-y-6">
+    <div class="rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/50 p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6">
       <div class="flex items-center gap-2 text-sm font-bold text-[var(--vscode-text)]">
         <Icon name="mdi:send" class="text-[var(--vscode-accent)] text-lg" />
         Send Direct Transmission

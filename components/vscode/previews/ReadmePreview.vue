@@ -1,11 +1,11 @@
 <template>
-  <div class="p-6 md:p-10 max-w-5xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-5xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Hero Banner Card -->
-    <div class="relative overflow-hidden rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/60 backdrop-blur-md p-6 md:p-8 shadow-xl">
+    <div class="relative overflow-hidden rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/60 backdrop-blur-md p-5 sm:p-6 md:p-8 shadow-xl">
       <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[var(--vscode-accent)]/10 blur-3xl pointer-events-none" />
-      <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-        <div class="relative group">
-          <div class="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border-2 border-[var(--vscode-accent)]/60 shadow-lg p-1 bg-[var(--vscode-bg)]">
+      <div class="relative z-10 flex flex-col md:flex-row items-center gap-5 sm:gap-6 md:gap-8">
+        <div class="relative group shrink-0">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border-2 border-[var(--vscode-accent)]/60 shadow-lg p-1 bg-[var(--vscode-bg)]">
             <img
               src="/image/profile.jpg"
               alt="Farhan Aditya"
@@ -20,44 +20,41 @@
         </div>
 
         <div class="flex-1 text-center md:text-left space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            Available for Engineering Roles & Contracts
-          </div>
+          <button
+            @click="vscode.openFile('Contact.env')"
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all cursor-pointer text-left"
+            title="Open Contact Channels"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+            <span>Available for Engineering Roles & Contracts — Get in Touch</span>
+            <Icon name="mdi:arrow-right" class="text-xs shrink-0" />
+          </button>
 
-          <h1 class="text-3xl md:text-4xl font-extrabold text-[var(--vscode-text)] tracking-tight">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--vscode-text)] tracking-tight">
             Farhan Aditya
           </h1>
 
-          <p class="text-base md:text-lg text-[var(--vscode-text-muted)] font-medium max-w-2xl leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg text-[var(--vscode-text-muted)] font-medium max-w-2xl leading-relaxed">
             Full Stack Developer & Software Engineer specializing in scalable enterprise web applications,
             modern Vue/Nuxt architectures, robust Laravel services, and high-performance databases.
           </p>
 
-          <!-- Quick Navigation Actions -->
-          <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+          <!-- Primary Direct CTAs to Contact -->
+          <div class="pt-2 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-2.5 sm:gap-3">
             <button
-              @click="vscode.openFile('Projects.json')"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-[var(--vscode-accent)] text-white shadow-md hover:brightness-110 active:scale-95 transition-all"
+              @click="vscode.openFile('Contact.env')"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold bg-[var(--vscode-accent)] text-white shadow-lg hover:brightness-110 active:scale-95 transition-all ring-2 ring-[var(--vscode-accent)]/30"
             >
-              <Icon name="mdi:briefcase-outline" class="text-base" />
-              View Projects
+              <Icon name="mdi:email-fast-outline" class="text-base" />
+              <span>Get in Touch / Hire Me</span>
             </button>
 
             <button
-              @click="vscode.openFile('Skills.ts')"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold border border-[var(--vscode-border)] bg-[var(--vscode-bg)] text-[var(--vscode-text)] hover:bg-[var(--vscode-accent)]/10 transition-all active:scale-95"
+              @click="vscode.openFile('Contact.env')"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold border border-[var(--vscode-border)] bg-[var(--vscode-bg)] text-[var(--vscode-text)] hover:bg-[var(--vscode-accent)]/10 hover:border-[var(--vscode-accent)]/40 transition-all active:scale-95"
             >
-              <Icon name="mdi:code-tags" class="text-base text-[var(--vscode-accent)]" />
-              Explore Tech Stack
-            </button>
-
-            <button
-              @click="vscode.toggleTerminal(true)"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold border border-[var(--vscode-border)] bg-[var(--vscode-bg)] text-[var(--vscode-text)] hover:bg-[var(--vscode-accent)]/10 transition-all active:scale-95"
-            >
-              <Icon name="mdi:terminal" class="text-base text-amber-400" />
-              Open Terminal
+              <Icon name="mdi:card-account-mail-outline" class="text-base text-[var(--vscode-accent)]" />
+              <span>Contact Channels & Form</span>
             </button>
           </div>
         </div>
@@ -112,6 +109,31 @@
           <p class="text-[var(--vscode-text-muted)]">Toggle between syntax-highlighted source and interactive rendered preview.</p>
         </div>
       </div>
+    </div>
+
+    <!-- Dedicated Bottom Contact CTA Banner -->
+    <div class="relative overflow-hidden rounded-2xl border border-[var(--vscode-accent)]/40 bg-gradient-to-br from-[var(--vscode-sidebar-bg)] via-[var(--vscode-sidebar-bg)]/80 to-[var(--vscode-bg)] p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
+          <Icon name="mdi:send-check-outline" class="text-base" />
+          Ready to Collaborate?
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-[var(--vscode-text)]">
+          Let's Build Something Exceptional Together
+        </h3>
+        <p class="text-xs sm:text-sm text-[var(--vscode-text-muted)] max-w-xl leading-relaxed">
+          Open for engineering roles, technical contracts, or architectural consulting. Let's discuss your project goals directly.
+        </p>
+      </div>
+
+      <button
+        @click="vscode.openFile('Contact.env')"
+        class="w-full md:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-[var(--vscode-accent)] text-white shadow-xl hover:brightness-110 active:scale-95 transition-all ring-4 ring-[var(--vscode-accent)]/20"
+      >
+        <Icon name="mdi:email-outline" class="text-base" />
+        <span>Contact Me Directly</span>
+        <Icon name="mdi:arrow-right" class="text-sm" />
+      </button>
     </div>
   </div>
 </template>

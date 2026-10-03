@@ -2,14 +2,14 @@
   <div
     v-if="vscode.isTerminalOpen.value"
     :class="[
-      'w-full bg-[var(--vscode-terminal-bg)] border-t border-[var(--vscode-border)] flex flex-col font-mono text-xs select-text shrink-0 z-20 transition-all duration-200 shadow-2xl',
-      isMaximized ? 'h-96' : 'h-64'
+      'w-full bg-[var(--vscode-terminal-bg)] border-t border-[var(--vscode-border)] flex flex-col font-mono text-xs select-text shrink-0 z-20 transition-all duration-200 shadow-2xl max-h-[60vh]',
+      isMaximized ? 'h-72 md:h-96' : 'h-48 md:h-64'
     ]"
   >
     <!-- Dock Header -->
     <div class="h-8 bg-[var(--vscode-sidebar-bg)] border-b border-[var(--vscode-border)] px-3 flex items-center justify-between select-none">
       <!-- Tabs -->
-      <div class="flex items-center gap-4 text-[11px] font-sans">
+      <div class="flex items-center gap-3 sm:gap-4 text-[11px] font-sans">
         <button
           v-for="tab in ['TERMINAL', 'OUTPUT', 'PROBLEMS']"
           :key="tab"
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Controls -->
-      <div class="flex items-center gap-1.5 text-[var(--vscode-text-muted)]">
+      <div class="flex items-center gap-1 sm:gap-1.5 text-[var(--vscode-text-muted)]">
         <button
           @click="clearTerminal"
           class="p-1 rounded hover:bg-[var(--vscode-bg)] hover:text-white transition-colors"
@@ -54,16 +54,30 @@
       </div>
     </div>
 
+    <!-- Mobile Quick Commands Toolbar -->
+    <div class="sm:hidden flex items-center gap-1.5 px-3 py-1 bg-[var(--vscode-bg)]/80 border-b border-[var(--vscode-border)]/40 overflow-x-auto scrollbar-none shrink-0">
+      <span class="text-[10px] text-[var(--vscode-text-muted)] shrink-0 font-sans">Quick:</span>
+      <button
+        v-for="cmd in ['help', 'skills', 'projects', 'contact', 'clear']"
+        :key="cmd"
+        @click="runDirectCommand(cmd)"
+        class="px-2 py-0.5 rounded text-[10px] bg-[var(--vscode-sidebar-bg)] border border-[var(--vscode-border)] text-[var(--vscode-accent)] shrink-0 active:scale-95 transition-transform"
+      >
+        {{ cmd }}
+      </button>
+    </div>
+
     <!-- Terminal Content Area -->
     <div
       v-if="activeDockTab === 'TERMINAL'"
       ref="terminalScrollContainer"
-      class="flex-1 p-3 overflow-y-auto space-y-1 font-mono text-[11px] md:text-xs leading-relaxed"
+      class="flex-1 p-2 sm:p-3 overflow-y-auto space-y-1 font-mono text-[11px] md:text-xs leading-relaxed"
     >
       <!-- History Lines -->
       <div v-for="(entry, idx) in history" :key="idx" class="space-y-1">
         <div class="flex items-center gap-1.5 text-[var(--vscode-text-muted)]">
-          <span class="text-emerald-400 font-bold">visitor@farhan-portfolio</span>
+          <span class="hidden sm:inline text-emerald-400 font-bold">visitor@farhan-portfolio</span>
+          <span class="sm:hidden text-emerald-400 font-bold">visitor</span>
           <span>:</span>
           <span class="text-[var(--vscode-accent)]">~</span>
           <span>$</span>
@@ -81,7 +95,8 @@
 
       <!-- Active Prompt Input -->
       <div class="flex items-center gap-1.5 pt-1 text-[var(--vscode-text-muted)]">
-        <span class="text-emerald-400 font-bold shrink-0">visitor@farhan-portfolio</span>
+        <span class="hidden sm:inline text-emerald-400 font-bold shrink-0">visitor@farhan-portfolio</span>
+        <span class="sm:hidden text-emerald-400 font-bold shrink-0">visitor</span>
         <span>:</span>
         <span class="text-[var(--vscode-accent)] shrink-0">~</span>
         <span>$</span>
@@ -90,8 +105,8 @@
           v-model="currentInput"
           @keydown="handleKeydown"
           type="text"
-          class="flex-1 bg-transparent border-none outline-none text-[var(--vscode-text)] font-mono text-[11px] md:text-xs p-0 m-0 focus:ring-0"
-          placeholder="Type 'help' for commands..."
+          class="flex-1 min-w-0 bg-transparent border-none outline-none text-[var(--vscode-text)] font-mono text-[11px] md:text-xs p-0 m-0 focus:ring-0"
+          placeholder="Type 'help'..."
           autofocus
         />
       </div>
@@ -222,6 +237,11 @@ const runCommand = (): void => {
   });
 
   scrollToBottom();
+};
+
+const runDirectCommand = (cmd: string): void => {
+  currentInput.value = cmd;
+  runCommand();
 };
 
 watch(() => vscode.isTerminalOpen.value, (isOpen) => {

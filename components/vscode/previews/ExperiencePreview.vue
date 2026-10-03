@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:p-10 max-w-4xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Header -->
     <div class="border-b border-[var(--vscode-border)] pb-4 space-y-1">
       <div class="text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
@@ -14,16 +14,16 @@
     </div>
 
     <!-- Timeline -->
-    <div class="relative border-l-2 border-[var(--vscode-border)] ml-3 md:ml-4 space-y-8 pl-6 md:pl-8">
+    <div class="relative border-l-2 border-[var(--vscode-border)] ml-2 sm:ml-4 space-y-6 sm:space-y-8 pl-5 sm:pl-8">
       <div
         v-for="exp in experienceList"
         :key="exp.title + exp.time"
         class="relative group"
       >
         <!-- Marker dot -->
-        <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[var(--vscode-bg)] border-2 border-[var(--vscode-accent)] group-hover:scale-125 transition-transform" />
+        <div class="absolute -left-[29px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-[var(--vscode-bg)] border-2 border-[var(--vscode-accent)] group-hover:scale-125 transition-transform" />
 
-        <div class="p-6 rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:border-[var(--vscode-accent)]/50 transition-all space-y-3">
+        <div class="p-4 sm:p-6 rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:border-[var(--vscode-accent)]/50 transition-all space-y-3">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <h3 class="text-lg font-bold text-[var(--vscode-text)]">

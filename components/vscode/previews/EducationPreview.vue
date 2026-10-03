@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:p-10 max-w-4xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Header -->
     <div class="border-b border-[var(--vscode-border)] pb-4 space-y-1">
       <div class="text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
@@ -14,11 +14,11 @@
     </div>
 
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 gap-6">
+    <div class="grid grid-cols-1 gap-4 sm:gap-6">
       <div
         v-for="edu in educationList"
         :key="edu.title + edu.time"
-        class="p-6 rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:border-[var(--vscode-accent)]/50 transition-all space-y-3"
+        class="p-4 sm:p-6 rounded-2xl border border-[var(--vscode-border)] bg-[var(--vscode-sidebar-bg)]/40 hover:border-[var(--vscode-accent)]/50 transition-all space-y-3"
       >
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>

@@ -27,12 +27,19 @@ Welcome to my interactive developer portfolio environment!
 - 🛠 Focus: High-performance web applications, Vue/Nuxt, Laravel, PostgreSQL, Redis, Docker
 - 🎯 Philosophy: Clean code, SOLID design, pragmatic problem solving
 
-## Navigation
+## Primary Call to Action: Get in Touch / Hire Me
+Interested in collaborating, hiring, or discussing technical projects?
+- 📄 Direct Contact Configuration: Open [Contact.env](file:///Contact.env) in this editor
+- 📧 Email: farhanaditya134@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/farhanadityaa/
+- 💻 GitHub: https://github.com/AugeusAune
+
+## Navigation & Exploration
 Use the File Explorer on the left, or press Ctrl+P / Cmd+K to open the Command Palette.
-Open the integrated terminal below (Ctrl+\`) to run CLI commands like 'skills', 'projects', or 'theme'.
+Open the integrated terminal below (Ctrl+\`) to run CLI commands like 'contact', 'projects', 'skills', or 'theme'.
 
 \`\`\`bash
-$ visitor@farhan-portfolio:~$ help
+$ visitor@farhan-portfolio:~$ contact
 \`\`\`
 `;
 

@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="vscode.isCommandPaletteOpen.value"
-    class="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 bg-black/50 backdrop-blur-xs select-none"
+    class="fixed inset-0 z-50 flex items-start justify-center pt-8 sm:pt-16 px-2 sm:px-4 bg-black/50 backdrop-blur-xs select-none"
     @click.self="vscode.toggleCommandPalette(false)"
   >
     <div

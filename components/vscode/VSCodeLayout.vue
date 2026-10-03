@@ -12,14 +12,24 @@
       <VSCodeSidebar />
 
       <!-- Mobile Backdrop for Sidebar -->
-      <div
-        v-if="vscode.isSidebarOpen.value"
-        class="md:hidden fixed inset-0 z-10 bg-black/40 backdrop-blur-xs"
-        @click="vscode.toggleSidebar(false)"
-      />
+      <transition
+        enter-active-class="transition-opacity duration-200 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition-opacity duration-150 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          v-if="vscode.isSidebarOpen.value"
+          class="md:hidden fixed inset-0 z-30 bg-black/60 backdrop-blur-xs"
+          @click="vscode.toggleSidebar(false)"
+          aria-hidden="true"
+        />
+      </transition>
 
       <!-- Editor & Terminal Column -->
-      <div class="flex-1 flex flex-col h-full overflow-hidden relative">
+      <div class="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
         <VSCodeEditor />
         <VSCodeTerminal />
       </div>
@@ -80,6 +90,7 @@ const handleGlobalKeydown = (e: KeyboardEvent): void => {
 
 onMounted(() => {
   vscode.initTheme();
+  vscode.initFromUrl();
 
   // Responsive default: close sidebar on narrow screens
   if (typeof window !== 'undefined' && window.innerWidth < 768) {
@@ -87,11 +98,13 @@ onMounted(() => {
   }
 
   window.addEventListener('keydown', handleGlobalKeydown);
+  window.addEventListener('popstate', vscode.handlePopState);
 });
 
 onUnmounted(() => {
   if (typeof window !== 'undefined') {
     window.removeEventListener('keydown', handleGlobalKeydown);
+    window.removeEventListener('popstate', vscode.handlePopState);
   }
 });
 </script>

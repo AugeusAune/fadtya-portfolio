@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:p-10 max-w-4xl mx-auto space-y-8 animate-fade-in">
+  <div class="p-4 sm:p-6 md:p-10 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
     <!-- Header -->
     <div class="border-b border-[var(--vscode-border)] pb-4 space-y-1">
       <div class="text-xs font-bold uppercase tracking-wider text-[var(--vscode-accent)]">
