@@ -52,7 +52,15 @@
         class="w-8 h-8 rounded-full overflow-hidden border border-[var(--vscode-border)] hover:border-[var(--vscode-accent)] transition-all hover:scale-105"
         title="Farhan's GitHub Profile"
       >
-        <img src="/image/profile.jpg" alt="Avatar" class="w-full h-full object-cover" />
+        <img
+          src="/image/profile.jpg"
+          alt="Avatar"
+          width="32"
+          height="32"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
       </a>
     </div>
   </aside>

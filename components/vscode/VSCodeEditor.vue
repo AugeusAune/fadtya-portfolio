@@ -70,13 +70,11 @@
           </div>
 
           <div class="flex overflow-x-auto">
-            <!-- Line Numbers -->
-            <div class="select-none pr-4 text-right text-[var(--vscode-text-muted)] opacity-60 font-mono text-xs shrink-0 border-r border-[var(--vscode-border)]/50 mr-4">
-              <div v-for="n in lineCount" :key="n">{{ n }}</div>
-            </div>
+            <!-- Line Numbers (Optimized single pre element) -->
+            <pre class="select-none pr-4 text-right text-[var(--vscode-text-muted)] opacity-60 font-mono text-xs shrink-0 border-r border-[var(--vscode-border)]/50 mr-4 font-normal leading-relaxed">{{ lineNumbersText }}</pre>
 
             <!-- Code Content -->
-            <pre class="flex-1 font-mono text-xs text-[var(--vscode-text)] overflow-x-auto whitespace-pre font-normal">{{ activeFile.codeContent }}</pre>
+            <pre class="flex-1 font-mono text-xs text-[var(--vscode-text)] overflow-x-auto whitespace-pre font-normal leading-relaxed">{{ activeFile.codeContent }}</pre>
           </div>
         </div>
       </div>
@@ -95,10 +93,8 @@
             </button>
           </div>
           <div class="flex">
-            <div class="select-none pr-3 text-right text-[var(--vscode-text-muted)] opacity-60 text-xs shrink-0 border-r border-[var(--vscode-border)]/40 mr-3">
-              <div v-for="n in lineCount" :key="n">{{ n }}</div>
-            </div>
-            <pre class="flex-1 text-xs text-[var(--vscode-text)] whitespace-pre overflow-x-auto">{{ activeFile.codeContent }}</pre>
+            <pre class="select-none pr-3 text-right text-[var(--vscode-text-muted)] opacity-60 font-mono text-xs shrink-0 border-r border-[var(--vscode-border)]/40 mr-3 font-normal leading-relaxed">{{ lineNumbersText }}</pre>
+            <pre class="flex-1 text-xs text-[var(--vscode-text)] whitespace-pre overflow-x-auto leading-relaxed">{{ activeFile.codeContent }}</pre>
           </div>
         </div>
 
@@ -112,25 +108,31 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, defineAsyncComponent } from 'vue';
 import { useVSCode } from '../../composables/useVSCode';
 import VSCodeTabs from './VSCodeTabs.vue';
 import ReadmePreview from './previews/ReadmePreview.vue';
-import AboutPreview from './previews/AboutPreview.vue';
-import SkillsPreview from './previews/SkillsPreview.vue';
-import ProjectsPreview from './previews/ProjectsPreview.vue';
-import ExperiencePreview from './previews/ExperiencePreview.vue';
-import EducationPreview from './previews/EducationPreview.vue';
-import ContactPreview from './previews/ContactPreview.vue';
+
+const AboutPreview = defineAsyncComponent(() => import('./previews/AboutPreview.vue'));
+const SkillsPreview = defineAsyncComponent(() => import('./previews/SkillsPreview.vue'));
+const ProjectsPreview = defineAsyncComponent(() => import('./previews/ProjectsPreview.vue'));
+const ExperiencePreview = defineAsyncComponent(() => import('./previews/ExperiencePreview.vue'));
+const EducationPreview = defineAsyncComponent(() => import('./previews/EducationPreview.vue'));
+const ContactPreview = defineAsyncComponent(() => import('./previews/ContactPreview.vue'));
 
 const vscode = useVSCode();
 const copied = ref(false);
 
 const activeFile = computed(() => vscode.activeFile.value);
 
-const lineCount = computed((): number => {
-  if (!activeFile.value?.codeContent) return 1;
-  return activeFile.value.codeContent.split('\n').length;
+const lineNumbersText = computed((): string => {
+  if (!activeFile.value?.codeContent) return '1';
+  const count = activeFile.value.codeContent.split('\n').length;
+  let res = '1';
+  for (let i = 2; i <= count; i++) {
+    res += '\n' + i;
+  }
+  return res;
 });
 
 const previewMap: Record<string, any> = {

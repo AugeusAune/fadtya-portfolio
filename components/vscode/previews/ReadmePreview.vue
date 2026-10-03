@@ -8,8 +8,11 @@
             <img
               src="/image/profile.jpg"
               alt="Farhan Aditya"
+              width="128"
+              height="128"
               class="w-full h-full object-cover rounded-lg"
               loading="eager"
+              decoding="async"
             />
           </div>
           <span class="absolute bottom-1 right-1 flex h-3.5 w-3.5">

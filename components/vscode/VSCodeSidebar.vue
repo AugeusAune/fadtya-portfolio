@@ -83,7 +83,7 @@
             <!-- Children Files -->
             <div v-if="expandedFolders[folder]" class="space-y-0.5 pl-4">
               <div
-                v-for="file in getFolderFiles(folder)"
+                v-for="file in folderFiles[folder]"
                 :key="file.id"
                 @click="handleOpenFile(file.id)"
                 :class="[
@@ -247,9 +247,11 @@ const toggleFolder = (folder: string): void => {
   expandedFolders.value[folder] = !expandedFolders.value[folder];
 };
 
-const getFolderFiles = (folder: 'src' | 'docs' | 'config'): VFSFile[] => {
-  return getFilesByFolder(folder);
-};
+const folderFiles = computed(() => ({
+  src: getFilesByFolder('src'),
+  docs: getFilesByFolder('docs'),
+  config: getFilesByFolder('config'),
+}));
 
 const handleOpenFile = (fileId: string): void => {
   vscode.openFile(fileId);

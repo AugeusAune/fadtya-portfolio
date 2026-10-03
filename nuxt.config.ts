@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   telemetry: false,
 
   css: [
@@ -57,6 +57,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
+    compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
       routes: [

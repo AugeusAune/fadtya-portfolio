@@ -22,8 +22,8 @@ html {
 }
 
 /* Typography base */
-* {
-  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+body, button, input, select, textarea {
+  font-family: "Heebo", "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-optical-sizing: auto;
 }
 
