@@ -17,8 +17,9 @@
   const route = useRoute();
   const vscode = useVSCode();
 
-  if (route.params.file) {
-    vscode.openFile(route.params.file, false);
+  const rawFile = Array.isArray(route.params.file) ? route.params.file[0] : route.params.file;
+  if (rawFile) {
+    vscode.openFile(rawFile, false);
   }
 
   const meta = getSiteMetadata();

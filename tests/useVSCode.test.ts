@@ -38,7 +38,21 @@ test("getFileFromPath resolves file IDs from path parameters cleanly", () => {
   expect(vscode.getFileFromPath("/Contact.env")).toBe("Contact.env");
   expect(vscode.getFileFromPath("/Projects.json")).toBe("Projects.json");
   expect(vscode.getFileFromPath("/Skills.ts")).toBe("Skills.ts");
+  // Extension-agnostic and case-insensitive resolution
+  expect(vscode.getFileFromPath("/aboutme")).toBe("AboutMe.vue");
+  expect(vscode.getFileFromPath("aboutme")).toBe("AboutMe.vue");
+  expect(vscode.getFileFromPath("/AboutMe")).toBe("AboutMe.vue");
+  expect(vscode.getFileFromPath("/projects")).toBe("Projects.json");
+  expect(vscode.getFileFromPath("/skills")).toBe("Skills.ts");
+  expect(vscode.getFileFromPath("/contact")).toBe("Contact.env");
   expect(vscode.getFileFromPath("/unknown-file")).toBeNull();
+});
+
+test("openFile handles file names without extension", () => {
+  const vscode = useVSCode();
+  vscode.openFile("aboutme");
+  expect(vscode.activeFileId.value).toBe("AboutMe.vue");
+  expect(vscode.openTabs.value).toContain("AboutMe.vue");
 });
 
 test("saveState and loadState persist and restore workspace state", () => {
