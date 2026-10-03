@@ -67,6 +67,15 @@ const handleGlobalKeydown = (e: KeyboardEvent): void => {
     vscode.toggleSidebar();
     return;
   }
+
+  // Ctrl+W or Cmd+W: Close active editor tab
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'w') {
+    e.preventDefault();
+    if (vscode.activeFileId.value) {
+      vscode.closeTab(vscode.activeFileId.value);
+    }
+    return;
+  }
 };
 
 onMounted(() => {

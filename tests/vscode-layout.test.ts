@@ -15,3 +15,9 @@ test("VSCodeLayout imports all primary IDE components", () => {
   expect(layout).toMatch(/VSCodeTerminal/);
   expect(layout).toMatch(/VSCodeStatusBar/);
 });
+
+test("VSCodeLayout intercepts Ctrl+W / Cmd+W to close active file tab", () => {
+  const layout = readFileSync("components/vscode/VSCodeLayout.vue", "utf-8");
+  expect(layout).toMatch(/['"]w['"]/);
+  expect(layout).toMatch(/closeTab/);
+});
