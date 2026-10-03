@@ -5,12 +5,22 @@
 </template>
 
 <script setup>
+  import { useRoute } from 'vue-router';
   import { getSiteMetadata, generatePersonSchema, generateWebSiteSchema } from '~/utils/seo';
   import VSCodeLayout from '~/components/vscode/VSCodeLayout.vue';
+  import { useVSCode } from '~/composables/useVSCode';
 
   definePageMeta({
     layout: false,
   });
+
+  const route = useRoute();
+  const vscode = useVSCode();
+
+  const rawFile = Array.isArray(route.params.file) ? route.params.file[0] : route.params.file;
+  if (rawFile) {
+    vscode.openFile(rawFile, false);
+  }
 
   const meta = getSiteMetadata();
 

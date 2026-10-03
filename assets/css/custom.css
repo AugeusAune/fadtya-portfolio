@@ -1,6 +1,24 @@
+/* Default VS Code Dark+ Theme Tokens (prevents flash of unstyled content) */
+:root {
+  --vscode-bg: #1e1e1e;
+  --vscode-sidebar-bg: #252526;
+  --vscode-activity-bg: #333333;
+  --vscode-titlebar-bg: #3c3c3c;
+  --vscode-statusbar-bg: #007acc;
+  --vscode-accent: #007acc;
+  --vscode-text: #cccccc;
+  --vscode-text-muted: #858585;
+  --vscode-border: #3c3c3c;
+  --vscode-tab-active-bg: #1e1e1e;
+  --vscode-tab-inactive-bg: #2d2d2d;
+  --vscode-terminal-bg: #181818;
+}
+
 /* Smooth native scrolling */
 html {
   scroll-behavior: smooth;
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
 }
 
 /* Typography base */
