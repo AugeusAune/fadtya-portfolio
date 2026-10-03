@@ -11,7 +11,7 @@ export const getSiteMetadata = (): SiteMetadata => ({
   title: "Farhan Aditya | Full Stack Engineer",
   description: "Farhan Aditya is a Full Stack Engineer building high-throughput backend services, scalable web applications, and mission-critical enterprise systems.",
   url: "https://fadtya-portfolio.vercel.app",
-  image: "/image/hire.png",
+  image: "/image/profile.jpg",
   author: "Farhan Aditya",
   keywords: [
     "Farhan Aditya",

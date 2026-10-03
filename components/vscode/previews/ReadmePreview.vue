@@ -7,7 +7,7 @@
         <div class="relative group">
           <div class="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border-2 border-[var(--vscode-accent)]/60 shadow-lg p-1 bg-[var(--vscode-bg)]">
             <img
-              src="/image/hire.png"
+              src="/image/profile.jpg"
               alt="Farhan Aditya"
               class="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
               loading="eager"
